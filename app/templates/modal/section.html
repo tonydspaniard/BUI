@@ -1,0 +1,90 @@
+<section id="modals">
+    <div class="page-header">
+        <h1>Modals
+            <small>Backbone.BUI.Modal</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="span3 columns">
+            <h3>About modals</h3>
+
+            <p>Backbone.BUI.Modal encapsulates boostrap modal dialogs. You can use alerts or confirm dialogs filling up
+                its body with any html content you wish. </p>
+        </div>
+        <div class="span9 columns">
+            <h2>Using bootstrap-modal</h2>
+
+            <p>Displaying a modal alert dialog:</p>
+            <pre class="prettyprint linenums">
+var alert = new Backbone.BUI.Modal({
+    header:'Modal Alert',
+    body:'This is a smooth modal test...',
+    onCancel:function(){ console.log('You clicked cancel button!');}
+});
+
+alert.render();
+            </pre>
+            <p>Displaying a modal confirm dialog:</p>
+            <pre class="prettyprint linenums">
+var confirm = new Backbone.BUI.Modal({
+    ctype: Backbone.BUI.Config.Modal.CONFIRM,
+    header:'Modal Confirm',
+    body:'This is a smooth modal test...',
+    onConfirm:function(){ console.log('You clicked confirm button!');},
+    onCancel:function(){ console.log('You clicked cancel button!');}
+});
+
+confirm.render();            </pre>
+
+            <h2>Live demo</h2>
+
+            <p>Check how well it works with Backbone.BUI.Button:</p>
+
+            <span id="alert-modal"></span> <span id="confirm-modal"></span>
+            <hr>
+
+            <h3>The code</h3>
+            <pre class="prettyprint linenums">
+var that = this;
+
+var alertButton = new Backbone.BUI.Button({
+    ctype:Backbone.BUI.Config.Button.Styles.PRIMARY,
+    renderTo:that.$('#alert-modal'),
+    label:'Test Alert Modal'
+}, {
+    'click':function () {
+        var alert = new Backbone.BUI.Modal({
+            header:'Modal Alert',
+            body:'This is a smooth modal test...',
+            onCancel:that.cancelAlert
+        });
+
+        alert.render();
+    }
+});
+
+alertButton.render();
+
+var confirmButton = new Backbone.BUI.Button({
+    ctype:Backbone.BUI.Config.Button.Styles.SUCCESS,
+    renderTo:that.$('#confirm-modal'),
+    label:'Test Confirm Modal'
+}, {
+    'click':function () {
+        var confirm = new Backbone.BUI.Modal({
+            ctype: Backbone.BUI.Config.Modal.CONFIRM,
+            header:'Modal Confirm',
+            body:'This is a smooth modal test...',
+            onConfirm:that.confirm,
+            onCancel:that.cancelConfirm
+        });
+
+        confirm.render();
+    }
+});
+
+confirmButton.render();
+            </pre>
+        </div>
+    </div>
+</section>

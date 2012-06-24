@@ -1,0 +1,54 @@
+<section id="alerts">
+    <div class="page-header">
+        <h1>Alerts</h1>
+        <small>Backbone.BUI.Alert</small>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <h3>Error or danger</h3>
+
+            <div id="alert-error"></div>
+            <pre class="prettyprint linenums">
+var alertError = new Backbone.BUI.Alert({
+  ctype: Backbone.BUI.Config.Alert.ERROR,
+  title: 'This is a test title',
+  message: 'This is a test message',
+  renderTo: this.$('#alert-error'),
+  timeout: null
+});
+alertError.render();
+            </pre>
+        </div>
+        <div class="span4">
+            <h3>Success</h3>
+
+            <div id="alert-success"></div>
+            <pre class="prettyprint linenums">
+var alertSuccess = new Backbone.BUI.Alert({
+  ctype: Backbone.BUI.Config.Alert.SUCCESS,
+  title: 'This is a test title',
+  message: 'This is a test message',
+  renderTo: this.$('#alert-success'),
+  timeout: null
+});
+alertSuccess.render();
+            </pre>
+        </div>
+        <div class="span4">
+            <h3>Information</h3>
+
+            <div id="alert-info"></div>
+            <pre class="prettyprint linenums">
+var alertInfo = new Backbone.BUI.Alert({
+  ctype: Backbone.BUI.Config.Alert.INFO,
+  title: 'This is a test title',
+  message: 'This is a test message',
+  renderTo: this.$('#alert-info'),
+  timeout: null
+});
+alertInfo.render();
+            </pre>
+        </div>
+    </div>
+    </div>
+</section>

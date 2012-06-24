@@ -1,0 +1,41 @@
+<section id="collapse">
+    <div class="page-header">
+        <h1>Collapse
+            <small>Backbone.BUI.Collapse</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="span3 columns">
+            <h3>About</h3>
+
+            <p>Get base styles and flexible support for collapsible components like accordions and navigation.</p>
+        </div>
+        <div class="span9 columns">
+            <h2>Example accordion</h2>
+
+            <p>Using the collapse plugin, we built a simple accordion style widget:</p>
+
+            <div id="sample-accordion"></div>
+
+            <hr>
+            <h2>The code</h2>
+            <pre class="prettyprint linenums">
+var accordion = new Backbone.BUI.Accordion({
+    renderTo: this.$('#sample-accordion'),
+    groups: [
+        {
+            header:'Collapsible Group Item #1',
+            content:'This is default content of Group Item #1 <b>hello</b>'
+        },
+        {
+            header:'Collapsible Group Item #2',
+            /* YES! You can also do AJAX! - make sure on your localhost this URL is set correctly*/
+            source:'http://localhost/bui/ajax-test.html'
+        }
+    ]
+});
+accordion.render();
+            </pre>
+        </div>
+    </div>
+</section>

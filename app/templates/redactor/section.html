@@ -1,0 +1,41 @@
+<section id="redactor">
+    <div class="page-header">
+        <h1>Redactor
+            <small>Backbone.BUI.Redactor</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="span3 columns">
+            <h3>About</h3>
+
+            <p>
+                Redactor is an amazing WYSIWYG editor for JQUERY and it is the best example of what Backbone.BUI library
+                can do. You can plug any external library into it thanks to its Backbone.BUI.Loader object.
+            </p>
+
+            <p>
+                <a href="http://www.redactorjs.com">Check Redactor Site</a> for a complete list of configuration options
+                for Redactor plugin.
+            </p>
+        </div>
+        <div class="span9 columns">
+            <h2>Example Redactor</h2>
+
+            <div id="sample-redactor"></div>
+            <hr>
+            <h2>The code</h2>
+            <pre class="prettyprint linenums">
+/* nothing is easier than this! */
+var redactor = new Backbone.BUI.Redactor(
+{
+    /* if we do not include a jquery object, it will be appended to the body tag */
+    renderTo: this.$('#sample-redactor'),
+    /* setting the height within the style of the element is a must according to Redactor to modify its default height */
+    attributes:{'style':'height:250px'}
+});
+
+redactor.render();
+            </pre>
+        </div>
+    </div>
+</section>

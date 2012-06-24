@@ -1,0 +1,96 @@
+<section id="buttons">
+    <div class="page-header">
+        <h1>Buttons</h1>
+        <small>Backbone.BUI.Button</small>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Button</th>
+            <th>class=""</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="btn-default"></td>
+            <td><code>btn</code></td>
+            <td>Standard gray button with gradient</td>
+        </tr>
+        <tr>
+            <td id="btn-primary"></td>
+            <td><code>btn btn-primary</code></td>
+            <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+        </tr>
+        <tr>
+            <td id="btn-info"></td>
+            <td><code>btn btn-info</code></td>
+            <td>Used as an alternative to the default styles</td>
+        </tr>
+        <tr>
+            <td id="btn-success"></td>
+            <td><code>btn btn-success</code></td>
+            <td>Indicates a successful or positive action</td>
+        </tr>
+        <tr>
+            <td id="btn-warning"></td>
+            <td><code>btn btn-warning</code></td>
+            <td>Indicates caution should be taken with this action</td>
+        </tr>
+        <tr>
+            <td id="btn-danger"></td>
+            <td><code>btn btn-danger</code></td>
+            <td>Indicates a dangerous or potentially negative action</td>
+        </tr>
+        <tr>
+            <td id="btn-inverse"></td>
+            <td><code>btn btn-inverse</code></td>
+            <td>Alternate dark gray button, not tied to a semantic action or use</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="span4">
+            <h3>Bootstrap buttons for Backbone</h3>
+
+            <p>
+                Render multiple bootstrap like buttons with a couple of lines. Check app/views/button/section for the
+                examples.
+            </p>
+             <pre class="prettyprint linenums">
+/* sample rendering of a button */
+var button = new Backbone.BUI.Button({
+  ctype:Backbone.BUI.Config.Styles.PRIMARY,
+  renderTo: $('#LAYER'),
+  label:'Test Label'
+}, {
+  'click':function () {
+      alert('Hello from click event');
+  }
+});
+/* append button to #LAYER */
+button.render();
+        </pre>
+        </div>
+        <div class="span4">
+            <h3>Multiple sizes</h3>
+
+            <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or
+                <code>.btn-mini</code> for two additional sizes.</p>
+
+            <p id="btn-sizes"></p>
+
+            <h3>Disabled states and Types</h3>
+
+            <p id="btn-states"></p>
+        </div>
+        <div class="span4">
+            <h3>One class, multiple tags</h3>
+
+            <p>Use the <code>tagName</code> attribute and <code>attributes</code> to change the element type.</p>
+
+            <p id="btn-multiple"></p>
+        </div>
+    </div>
+</section>
